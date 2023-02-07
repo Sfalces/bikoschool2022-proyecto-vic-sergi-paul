@@ -5,14 +5,30 @@ import { useContext } from "react";
 export const CommentCreator = () => {
 
   const { user } = useContext(UserContext);
-  
-  const profimg = user ? user.token.image : undefined
 
   if (user !== undefined) {
-    return <></>;
+    return(
+      <div className="comments_containter">
+        <div className="input_container">
+          <div>
+            <img src={user.token.image} className="profileimage" alt=""></img>
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="¿Algo que comentar?"
+              className="comment">
+            </input>
+          </div>
+        </div>
+        <div>
+          <button className="postear"> Comentar</button>  
+        </div> 
+      </div>
+  )
   }
   return(
-      <div>
+      <div className="comments_containter">
         <div className="input_container">
           <div>
             <div className="profileimage" ></div>
@@ -22,12 +38,11 @@ export const CommentCreator = () => {
               type="text"
               placeholder="¿Algo que comentar?"
               className="comment">
-
             </input>
           </div>
         </div>
         <div>
-          <button></button>  
+          <button className="postear"> Comentar</button>  
         </div> 
       </div>
   )

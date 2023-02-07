@@ -1,3 +1,13 @@
+.comments_containter{
+  margin-left: 1rem;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 1128px;
+  height: 177px;
+  gap: 1rem;
+}
+
 .profileimage {
     width: 100px;
     height: 100px;
@@ -15,14 +25,28 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-
+    padding-left: 1rem;
 }
 
 .input_container{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
     gap: 1.5rem;
+}
+
+.postear{
+  width: 140px;
+  height: 41px;
+  border: none;
+  background-color: #c850c0;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24.79px;
+  cursor: pointer;
+  margin-right: auto;
 }

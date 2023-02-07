@@ -32,7 +32,7 @@ export const UsersRouter = (db: low.LowdbSync<DataBaseSchema>) => {
     )
 
     if (user === undefined){
-        res.json("");
+        res.send(403);
         return
     }
 

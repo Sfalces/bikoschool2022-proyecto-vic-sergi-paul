@@ -11,10 +11,6 @@ export interface Meme {
   relatedMemes: RelatedMeme[];
 }
 
-interface User {
-  username: string;
-}
-
 export interface MemeRepository {
   getMeme: (memeID: string) => Promise<Meme | undefined>;
   searchMemes: (options: { limit: number; search: string }) => Promise<Meme[]>;
