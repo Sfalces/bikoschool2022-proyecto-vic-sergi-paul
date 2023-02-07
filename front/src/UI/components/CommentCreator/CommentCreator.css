@@ -1,0 +1,28 @@
+.profileimage {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    background: linear-gradient(to right bottom, #4158d0, #00ccff);
+}
+
+.comment{
+    width: 1003px;
+    height: 124px;
+    border-radius: 15px;
+    margin-left: 1rem;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+}
+
+.input_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}

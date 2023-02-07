@@ -13,7 +13,7 @@ export const Logout = () => {
   
   const nickname = user?.username
 
-  console.log(user?.token.image)
+  console.log(user?.token)
   
   return (
     <div className="login_container">

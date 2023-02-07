@@ -21,7 +21,7 @@ export interface MemeRepository {
 }
 
 export interface UserRepository {
-  login: (username: string, password: string) => Promise<Token | undefined>;
+  login: (username: string, password: string) => Promise< Token | undefined>;
 }
 
 export interface Token{

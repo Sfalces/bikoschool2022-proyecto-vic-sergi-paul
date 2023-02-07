@@ -5,6 +5,7 @@ import { GifTitle } from "../GifTitle/GifTitle";
 import { TagList } from "../TagList/TagList";
 import { LikeLogo } from "../Logos/LikeLogo";
 import { Link } from "react-router-dom";
+import { CommentCreator } from "../CommentCreator/CommentCreator";
 
 interface Props {
   meme: Meme | undefined;
@@ -36,6 +37,7 @@ export const DetailedGif = ({ meme, isLoading }: Props) => {
         <GifCard title={meme.title} alt={meme.title} src={meme.url} />
         <TagList title={meme.title} tags={meme.tags} />
       </div>
+      <CommentCreator/>
       <div className="refTitle font-h3">
         <div className="related_text">
           <div>

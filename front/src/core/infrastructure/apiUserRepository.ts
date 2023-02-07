@@ -1,3 +1,4 @@
+import { tokenToString } from "typescript";
 import { UserRepository, Token } from "../domain/meme";
 
 export const SERVER = "localhost:4000";
@@ -12,14 +13,15 @@ export const apiUserRepository: UserRepository = {
       body: JSON.stringify({ username: username, password: password }),
     };
 
-    const response: Token | undefined = await fetch(url, requestOptions).then(
+    const response:  Token | undefined = await fetch(url, requestOptions).then(
       (response) => {
+        console.log('prueba',response.status)
         if (response.status === 200) return response.json();
         return undefined;
       }
     );
-
-    if (response === undefined) return undefined;
+    if (response?.token === "") return undefined;
+    console.log("hola")
 
     return response;
   },
