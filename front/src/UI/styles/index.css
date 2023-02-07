@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-Blue) 0%,
+    var(--color-Pink) 50%,
+    var(--color-Yellow) 100%
+  );
+}
+
+#root {
+  height: 100%;
+}
+
+:root {
+  --color-Purple: #9933ff;
+  --color-LightRed: #ff6666;
+  --color-LightBlue: #00ccff;
+  --color-LightGreen: #00ff99;
+  --color-LightYellow: #fff9aa;
+  --color-Blue: #4158d0;
+  --color-Pink: #c850c0;
+  --color-Yellow: #ffcc70;
+  --color-Black: #000000;
+  --color-Grey: #999999;
+  --color-White: #ffffff;
+
+  --spacing-xtiny: 0.25rem; /*4px*/
+  --spacing-tiny: 0.5rem; /*8px*/
+  --spacing-small: 0.75rem; /*12px*/
+  --spacing-mini: 1rem; /*16px*/
+  --spacing-base: 1.5rem; /*24px*/
+  --spacing-medium: 2rem; /*32px*/
+  --spacing-large: 3rem; /*48px*/
+  --spacing-xlarge: 4rem; /*64px*/
+  --spacing-huge: 6rem; /*96px*/
+}
+
+.font-regular-small {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 400;
+}
+.font-regular-base {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+.font-h4 {
+  font-size: 1.125rem;
+  line-height: 1.563rem;
+  font-weight: 400;
+}
+
+.font-h3 {
+  font-size: 1.602rem;
+  line-height: 2.188rem;
+  font-weight: 700;
+}
+.font-h3-light {
+  font-size: 1.602rem;
+  line-height: 2.188rem;
+  font-weight: 400;
+}
+
+.font-h2 {
+  font-size: 2.276rem;
+  line-height: 3.125rem;
+  font-weight: 700;
+}
+.font-h2-light {
+  font-size: 2.276rem;
+  line-height: 3.125rem;
+  font-weight: 400;
+}
+
+.font-h1 {
+  font-size: 2.614rem;
+  line-height: 3.563rem;
+  font-weight: 700;
+}

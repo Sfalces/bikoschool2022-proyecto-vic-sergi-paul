@@ -1,0 +1,84 @@
+.login_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 291px;
+  }
+  
+  .login {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .logout-button {
+    text-decoration: none;
+    width: 138px;
+    height: 50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.65);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24.5px;
+  }
+  
+  .login-button:hover {
+    color: aqua;
+  }
+  
+  .login_listado {
+    position: absolute;
+    top: 50px;
+    display: none;
+    flex-direction: column;
+    width: 291px;
+    height: auto;
+    border-radius: 15px 0 15px 15px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  }
+  
+  .login_listado.isActive {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .deslogearse {
+    width: auto;
+    height: 40px;
+    border: none;
+    background-color: #c850c0;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.79px;
+    cursor: pointer;
+  }
+  
+  
+  .icono {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to right bottom, #4158d0, #00ccff);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .login-desplegable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .profile_image{
+    width: 50px;
+    height: 50px;
+  }

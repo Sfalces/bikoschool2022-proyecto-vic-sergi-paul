@@ -1,0 +1,19 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem 9.75rem 0 9.75rem;
+}
+
+@media screen and (max-width: 768px) {
+  .layout {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .layout {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+}

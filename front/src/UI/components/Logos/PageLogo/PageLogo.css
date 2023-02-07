@@ -1,0 +1,15 @@
+.guifAffinityLogoImg {
+  width: 370px;
+}
+
+@media screen and (max-width: 768px) {
+  .guifAffinityLogoImg {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .guifAffinityLogoImg {
+    width: 270px;
+  }
+}

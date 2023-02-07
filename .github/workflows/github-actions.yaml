@@ -1,0 +1,112 @@
+name: Front pipeline vic-sergi-paul
+on:
+  push:
+    branches: [vic-sergi-paul]
+  pull_request:
+    branches: [vic-sergi-paul]
+
+jobs:
+  node_v14_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.x
+
+      - name: Install deps
+        working-directory: front
+        run: npm ci
+
+      - name: Run tests
+        working-directory: front
+        run: npm test
+
+  node_v14_build:
+    needs: node_v14_test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.x
+
+      - name: Install deps
+        working-directory: front
+        run: npm ci
+
+      - name: Run Build
+        working-directory: front
+        run: npm run build
+
+      - name: Upload build
+        uses: actions/upload-artifact@v3
+        with:
+          name: build_v14
+          path: front/build/
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: "${{ secrets.SERGI_SECRET }}"
+
+  node_v16_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Install deps
+        working-directory: front
+        run: npm ci
+
+      - name: Run tests
+        working-directory: front
+        run: npm test
+
+  node_v16_build:
+    needs: node_v16_test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Install deps
+        working-directory: front
+        run: npm ci
+
+      - name: Run Build
+        working-directory: front
+        run: npm run build
+
+      - name: Upload build
+        uses: actions/upload-artifact@v3
+        with:
+          name: build_v16
+          path: front/build/
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: "${{ secrets.SERGI_SECRET }}"

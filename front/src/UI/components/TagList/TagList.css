@@ -1,0 +1,23 @@
+.tagsList__TitleContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.tagsList__TitleText {
+  align-self: center;
+}
+
+.tag_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tag {
+  font-family: "Open Sans";
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  background: rgba(0, 0, 0, 0.62);
+  border-radius: 109px;
+}
